@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="sw"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mulas Digital – Mafunzo ya Usanifu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap">
+<style>
+:root{--bg:#f6f3ee;--card:#fff;--ink:#12303a;--mute:#5d727a;--line:#e3ddd2;--brand:#0e5668;--gold:#b7791f;--onbrand:#fff;--hero:linear-gradient(180deg,rgba(6,35,45,.35),rgba(6,35,45,.85));
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1c22;--card:#112a32;--ink:#eef3f4;--mute:#9db3ba;--line:#1f3d47;--brand:#2a9bb5;--gold:#e0b050;--onbrand:#04202a}}
+:root[data-theme="dark"]{--bg:#0a1c22;--card:#112a32;--ink:#eef3f4;--mute:#9db3ba;--line:#1f3d47;--brand:#2a9bb5;--gold:#e0b050;--onbrand:#04202a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,Arial,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.2}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:12px 20px;gap:12px;flex-wrap:wrap}
+.logo{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:20px}
+nav{display:flex;gap:4px}
+nav button{background:none;border:0;color:var(--mute);font:600 15px Manrope,sans-serif;padding:8px 14px;border-radius:8px;cursor:pointer}
+nav button{transition:background .25s,box-shadow .25s,color .25s}
+nav button:hover{color:var(--ink);background:linear-gradient(135deg,rgba(0,140,255,.14),rgba(0,210,150,.14))}
+nav button[aria-selected="true"]{color:#fff;background:linear-gradient(135deg,#0a6cff 0%,#00a8e8 45%,#00d68f 100%);box-shadow:0 4px 14px rgba(0,168,232,.45),inset 0 1px 0 rgba(255,255,255,.45);text-shadow:0 1px 2px rgba(0,0,0,.25)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:var(--hero),linear-gradient(135deg,#0b3a4a 0%,#1d7f8f 55%,#e8c98f 100%);background-size:cover;background-position:center;color:#fff;text-align:center;padding:72px 20px 56px}
+.hero .pic{width:120px;height:120px;border-radius:50%;border:4px solid #fff;margin:0 auto 18px;background:#0e5668 center/cover;display:grid;place-items:center;font:700 38px Fraunces,serif}
+.hero h1{font-size:clamp(30px,6vw,52px)}
+.hero p{max-width:560px;margin:12px auto 0;opacity:.92}
+main{max-width:1000px;margin:0 auto;padding:36px 20px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:22px}
+.card p{margin:0;color:var(--mute);font-size:15px}
+.price{font-weight:700;color:var(--gold);font-size:18px}
+.btn{margin-top:auto;border:0;border-radius:10px;background:var(--brand);color:var(--onbrand);font:700 15px Manrope,sans-serif;padding:12px;cursor:pointer}
+.btn.alt{background:transparent;color:var(--brand);border:1px solid var(--brand)}
+.badge{font-size:13px;font-weight:700;color:var(--mute)}
+.empty{color:var(--mute);padding:30px 0}
+.vid{aspect-ratio:16/9;width:100%;border:0;border-radius:10px;background:#000}
+dialog{border:0;border-radius:16px;max-width:440px;width:92%;background:var(--card);color:var(--ink);padding:26px}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog ol{padding-left:20px;color:var(--mute);font-size:15px}
+select,input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:16px Manrope,sans-serif;margin:6px 0 10px}
+.err{color:#c0392b;font-size:14px;min-height:20px}
+footer{background:#0b3a4a;color:#e9f1f3;margin-top:50px;padding:36px 20px;text-align:center}
+footer h2{font-size:24px;margin-bottom:12px}
+footer p{margin:4px 0}footer a{color:#f0cf8a}
+.warn{font-size:13px;color:var(--mute)}
+.head{display:flex;align-items:center;gap:14px}
+.ico{flex:none;width:54px;height:54px;border-radius:13px;display:grid;place-items:center;font:700 22px Manrope,sans-serif;letter-spacing:-.5px;border:2px solid currentColor;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.arow{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.arow .btn{padding:6px 10px;margin:0;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">mulasdigital.com</div>
+  <nav role="tablist" aria-label="Menu">
+    <button role="tab" data-tab="mafunzo" aria-selected="true">Mafunzo</button>
+    <button role="tab" data-tab="paid" aria-selected="false">Niliyolipia</button>
+    <button role="tab" data-tab="files" aria-selected="false">File Offer</button>
+  </nav>
+  <button id="adminBtn" class="btn alt" hidden="" style="margin:0;padding:8px 14px">Admin</button>
+</header>
+
+<section class="hero">
+  <!-- Picha ya wasifu: weka kiungo cha picha yako kwenye CONFIG.profilePhoto -->
+  <div class="pic" id="pic">SY</div>
+  <h1>Salim Yussuf – Mulas Digital</h1>
+  <p>Jifunze usanifu na uhariri wa video kwa vitendo. Mafunzo ya video hatua kwa hatua, kutoka Zanzibar.</p>
+</section>
+
+<main id="view"></main>
+
+<footer id="contact">
+  <h2>Contact us</h2>
+  <p>Gmail: <a href="mailto:salumyussuf19@gmail.com">salumyussuf19@gmail.com</a></p>
+  <p>Phone: <a href="tel:0773895948">0773895948</a></p>
+  <p>Instagram: <a href="https://instagram.com/Mulas_Digital" target="_blank" rel="noopener">Mulas_Digital</a></p>
+  <p style="opacity:.6;margin-top:16px;font-size:13px">© mulasdigital.com</p>
+</footer>
+
+<dialog id="pay">
+  <h3 id="pt"></h3>
+  <p class="price" id="pp"></p>
+  <ol>
+    <li>Tuma kiasi hicho kwa <b>Mixx by Yas</b> kwenda <b>0773895948</b>.</li>
+    <li>Weka namba yako ya simu na code ya muamala hapa chini, kisha bonyeza Tuma uthibitisho.</li>
+    <li>Utapokea code ya kufungua. Iandike hapo chini.</li>
+  </ol>
+  <input id="ph" placeholder="Namba yako ya simu" inputmode="tel">
+  <input id="tx" placeholder="Code ya muamala (Transaction ID)">
+  <button class="btn alt" id="send" style="width:100%">Tuma uthibitisho</button>
+  <input id="code" placeholder="Code ya kufungua" style="margin-top:14px">
+  <div class="err" id="err"></div>
+  <div style="display:flex;gap:10px"><button class="btn" id="unlock" style="flex:1">Fungua</button><button class="btn alt" id="close" style="flex:1">Funga</button></div>
+</dialog>
+
+<dialog id="adm" style="max-width:560px;max-height:90vh;overflow:auto">
+<h3>Admin</h3>
+<p class="warn">Ongeza au hariri masomo na picha. Ukihifadhi, ukurasa unajisasisha wenyewe.</p>
+<select id="a_type"><option value="mafunzo">Mafunzo</option><option value="files">File Offer</option></select>
+<input id="a_name" placeholder="Jina la somo au file">
+<input id="a_price" placeholder="Bei (mfano TSh 20,000)">
+<input id="a_vid" placeholder="YouTube video ID">
+<input id="a_code" placeholder="Code ya kufungua">
+<input id="a_desc" placeholder="Maelezo mafupi">
+<textarea id="a_les" rows="5" placeholder="Masomo ya ndani, mstari mmoja kila moja:
+Jina | YouTube ID | bure au funga
+Mfano: Utangulizi | abc123XYZ00 | bure"></textarea>
+<button class="btn" id="a_save" style="width:100%">Hifadhi</button>
+<h3 style="margin-top:18px;font-size:18px">Picha</h3>
+<label class="warn">Picha yako ya wasifu<input type="file" accept="image/*" id="a_pp"></label>
+<label class="warn">Picha ya nyuma (Stone Town, wide)<input type="file" accept="image/*" id="a_hero"></label>
+<h3 style="margin-top:18px;font-size:18px">Vilivyopo</h3>
+<div id="alist"></div>
+<div class="err" id="amsg"></div>
+<button class="btn alt" id="a_close" style="width:100%;margin-top:10px">Funga</button>
+</dialog>
+
+<script>
+var SRC="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
+/* ===== MIPANGILIO YAKO (hariri hapa) ===== */
+var CONFIG = {email: "salumyussuf19@gmail.com"};
+var SITE = {"profilePhoto":"","heroImage":""};
+var ITEMS = [{"id":"ae","type":"mafunzo","name":"After Effects","price":"TSh 30,000","videoId":"","code":"AE-2026","desc":"Programu ya motion graphics na visual effects. Utajifunza animation, text effects na kuunda intro za kitaalamu."},{"id":"ps","type":"mafunzo","name":"Photoshop","price":"TSh 25,000","videoId":"","code":"PS-2026","desc":"Programu bora ya kuhariri picha. Utajifunza layers, retouching, mabango na poster za biashara."},{"id":"ai","type":"mafunzo","name":"Illustrator","price":"TSh 25,000","videoId":"","code":"AI-2026","desc":"Programu ya vector graphics. Utajifunza kubuni nembo (logo), icons na michoro isiyopoteza ubora."},{"id":"pr","type":"mafunzo","name":"Premiere Pro","price":"TSh 30,000","videoId":"","code":"PR-2026","desc":"Programu ya kuhariri video za kitaalamu. Utajifunza cutting, rangi, sauti na kutoa video kamili."},{"id":"cc","type":"mafunzo","name":"CapCut","price":"TSh 15,000","videoId":"","code":"CC-2026","desc":"Programu rahisi ya kuhariri video kwa simu na kompyuta. Inafaa kwa Reels, TikTok na Shorts."},{"id":"f1","type":"files","name":"Plugins","price":"TSh 10,000","videoId":"","code":"F1-2026","desc":"Weka maelezo mafupi ya file lako hapa, mfano templates, presets au project files."}];
+/*END*/
+/* ========================================= */
+var PKEY="mulas_unlocked", view=document.getElementById("view"), cur="mafunzo", sel=null;
+function got(){try{return JSON.parse(localStorage.getItem(PKEY)||"[]")}catch(e){return []}}
+function save(a){try{localStorage.setItem(PKEY,JSON.stringify(a))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var ICONS={ae:["Ae","#9999ff","#00005b"],ps:["Ps","#31a8ff","#001e36"],ai:["Ai","#ff9a00","#330000"],pr:["Pr","#9999ff","#00005b"],cc:["Cc","#ffffff","#000000"]};
+function ico(it){var c=ICONS[it.id]||[(it.name||"?").slice(0,2),"#00d68f","#08303a"];
+  return '<div class="ico" aria-hidden="true" style="color:'+c[1]+';background:'+c[2]+'">'+esc(c[0])+'</div>'}
+var openId=null,playing=null;
+function lessonsOf(it){if(it.lessons&&it.lessons.length)return it.lessons;var n=it.name;return [{t:"Utangulizi kuhusu "+n,v:it.videoId||"",free:true},{t:"Lesson tools",v:"",free:false},{t:"Lesson 1",v:"",free:false},{t:"Lesson 2",v:"",free:false}]}
+function cardM(it,open){
+  var b='<button class="btn" data-o="'+it.id+'">'+(open?'Fungua masomo':'Angalia masomo (sehemu ya bure)')+'</button>';
+  if(!open)b+='<button class="btn alt" data-id="'+it.id+'" style="margin-top:8px">Fungua yote – '+esc(it.price)+'</button>';
+  return '<article class="card"><div class="head">'+ico(it)+'<h3>'+esc(it.name)+'</h3></div><span class="badge">'+(open?"Imefunguliwa yote":"Sehemu ya bure na masomo yaliyofungwa")+'</span><p>'+esc(it.desc)+'</p>'+(open?'':'<div class="price">'+esc(it.price)+'</div>')+b+'</article>';
+}
+function renderCourse(){
+  var it=ITEMS.filter(function(x){return x.id===openId})[0];
+  if(!it){openId=null;return render()}
+  var paid=got().indexOf(it.id)>-1,ls=lessonsOf(it),cl=playing!==null?ls[playing]:null,pl='';
+  if(cl&&(cl.free||paid))pl='<h3 style="margin:0 0 10px">'+esc(cl.t)+'</h3>'+(cl.v?'<iframe class="vid" src="https://www.youtube-nocookie.com/embed/'+esc(cl.v)+'" title="'+esc(cl.t)+'" allowfullscreen></iframe>':'<p class="warn">Video bado haijawekwa.</p>');
+  else pl='<p class="warn">Chagua somo la bure kuanza, au fungua yote kwa '+esc(it.price)+'.</p>';
+  var rows=ls.map(function(l,i){var ok=l.free||paid;return '<div class="arow"><span>'+esc(l.t)+' <span class="badge">'+(l.free?'Bure':(paid?'Limefunguliwa':'Limefungwa'))+'</span></span><button class="btn alt" data-l="'+i+'" data-id="'+it.id+'">'+(ok?'Tazama':'Fungua')+'</button></div>'}).join("");
+  view.innerHTML='<button class="btn alt" id="back" style="padding:8px 14px">Rudi</button><div class="head" style="margin:16px 0">'+ico(it)+'<h2>'+esc(it.name)+'</h2></div><div class="card" style="margin-bottom:18px">'+pl+'</div><div class="card">'+rows+(paid?'':'<button class="btn" data-id="'+it.id+'" style="margin-top:14px">Fungua masomo yote – '+esc(it.price)+'</button>')+'</div>';
+}
+view.addEventListener("click",function(e){var d=e.target.dataset||{};
+  if(d.o){openId=d.o;var it=ITEMS.filter(function(x){return x.id===d.o})[0],ls=lessonsOf(it),pd=got().indexOf(it.id)>-1;playing=(ls[0]&&(ls[0].free||pd))?0:null;render();window.scrollTo(0,0)}
+  else if(d.l!==undefined){var it2=ITEMS.filter(function(x){return x.id===openId})[0],l=lessonsOf(it2)[+d.l];if(l.free||got().indexOf(it2.id)>-1){playing=+d.l;render()}}
+  else if(e.target.id==="back"){openId=null;render()}});
+function card(it,open){if(it.type==="mafunzo")return cardM(it,open);
+  var v=open?(it.videoId?'<iframe class="vid" src="https://www.youtube-nocookie.com/embed/'+esc(it.videoId)+'" title="'+esc(it.name)+'" allowfullscreen></iframe>':'<p class="warn">Video bado haijawekwa.</p>')
+    :'<button class="btn" data-id="'+it.id+'">Fungua somo – '+esc(it.price)+'</button>';
+  return '<article class="card"><div class="head">'+ico(it)+'<h3>'+esc(it.name)+'</h3></div><span class="badge">'+(open?"Imefunguliwa":"Imefungwa")+'</span><p>'+esc(it.desc)+'</p>'+(open?'':'<div class="price">'+esc(it.price)+'</div>')+v+'</article>';
+}
+function render(){
+  if(openId)return renderCourse();
+  var g=got(),list;
+  if(cur==="paid"){list=ITEMS.filter(function(i){return g.indexOf(i.id)>-1});
+    view.innerHTML=list.length?'<div class="grid">'+list.map(function(i){return card(i,true)}).join("")+'</div>':'<p class="empty">Bado hujalipia somo lolote. Masomo uliyolipia yataonekana hapa.</p>';}
+  else{list=ITEMS.filter(function(i){return i.type===cur});
+    view.innerHTML='<h2 style="margin-bottom:18px">'+(cur==="files"?"File Offer":"Mafunzo")+'</h2><div class="grid">'+list.map(function(i){return card(i,g.indexOf(i.id)>-1)}).join("")+'</div>';}
+}
+document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){
+  cur=b.dataset.tab;openId=null;document.querySelectorAll("nav button").forEach(function(x){x.setAttribute("aria-selected",x===b)});render()}});
+var dlg=document.getElementById("pay");
+view.addEventListener("click",function(e){var id=e.target.dataset&&e.target.dataset.id;if(!id)return;
+  sel=ITEMS.filter(function(i){return i.id===id})[0];
+  document.getElementById("pt").textContent=sel.name;document.getElementById("pp").textContent="Bei: "+sel.price;
+  document.getElementById("err").textContent="";document.getElementById("code").value="";dlg.showModal()});
+document.getElementById("close").onclick=function(){dlg.close()};
+document.getElementById("send").onclick=function(){
+  var ph=document.getElementById("ph").value,tx=document.getElementById("tx").value;
+  if(!ph||!tx){document.getElementById("err").textContent="Weka namba ya simu na code ya muamala.";return}
+  location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Malipo: "+sel.name)+"&body="+encodeURIComponent("Somo: "+sel.name+"\nBei: "+sel.price+"\nSimu: "+ph+"\nCode ya muamala: "+tx)};
+document.getElementById("unlock").onclick=function(){
+  var c=document.getElementById("code").value.trim();
+  if(c&&c.toLowerCase()===sel.code.toLowerCase()){var g=got();if(g.indexOf(sel.id)<0)g.push(sel.id);save(g);dlg.close();render()}
+  else document.getElementById("err").textContent="Code si sahihi. Angalia na ujaribu tena."};
+if(SITE.profilePhoto){var p=document.getElementById("pic");p.style.backgroundImage="url("+SITE.profilePhoto+")";p.textContent=""}
+if(SITE.heroImage){document.querySelector(".hero").style.backgroundImage="var(--hero),url("+SITE.heroImage+")"}
+render();
+
+/* ===== ADMIN ===== */
+(function(){
+var A=document.getElementById("adm"),ed=null;
+function $(i){return document.getElementById(i)}
+function j(o){return JSON.stringify(o).replace(/</g,"\\u003c")}
+function parseL(s){return s.split("\n").map(function(r){var p=r.split("|").map(function(x){return x.trim()});return p[0]?{t:p[0],v:p[1]||"",free:/^bure/i.test(p[2]||"")}:null}).filter(Boolean)}
+function listA(){var h="";ITEMS.forEach(function(i){h+='<div class="arow"><span>'+esc(i.name)+' ('+esc(i.type)+')</span><span><button class="btn alt" data-e="'+i.id+'">Hariri</button> <button class="btn alt" data-d="'+i.id+'">Futa</button></span></div>'});$("alist").innerHTML=h||'<p class="warn">Hakuna kitu bado.</p>'}
+async function commit(){
+  $("amsg").textContent="Inahifadhi...";
+  try{
+    var art=await claude.use("artifact");
+    if(!art){$("amsg").textContent="Huwezi kuhifadhi hapa. Fungua ukurasa ukiwa umeingia kwenye akaunti yako.";return}
+    var rep="var SITE = "+j(SITE)+";\nvar ITEMS = "+j(ITEMS)+";\n/*"+"END*/";
+    await art.publish(SRC.replace(/var SITE = [\s\S]*?\/\*END\*\//,function(){return rep}));
+  }catch(e){$("amsg").textContent="Imeshindwa kuhifadhi. Jaribu tena."}
+}
+(async function(){try{var u=await claude.use("user");if(u&&((await u.canEdit())||(await u.isOwner())))$("adminBtn").hidden=false}catch(e){}})();
+$("adminBtn").onclick=function(){$("amsg").textContent="";listA();A.showModal()};
+$("a_close").onclick=function(){A.close()};
+$("a_save").onclick=function(){
+  var n=$("a_name").value.trim(),p=$("a_price").value.trim();
+  if(!n||!p){$("amsg").textContent="Weka jina na bei.";return}
+  var it={id:ed||"n"+Date.now(),type:$("a_type").value,name:n,price:p,videoId:$("a_vid").value.trim(),code:$("a_code").value.trim()||"CODE-"+Date.now().toString(36),desc:$("a_desc").value.trim(),lessons:parseL($("a_les").value)};
+  var k=ITEMS.findIndex(function(x){return x.id===it.id});
+  if(k>-1)ITEMS[k]=it;else ITEMS.push(it);
+  commit()};
+$("alist").onclick=function(e){
+  var d=e.target.dataset.d,id=e.target.dataset.e;
+  if(d){ITEMS=ITEMS.filter(function(x){return x.id!==d});commit()}
+  if(id){var it=ITEMS.filter(function(x){return x.id===id})[0];ed=id;
+    $("a_type").value=it.type;$("a_name").value=it.name;$("a_price").value=it.price;$("a_vid").value=it.videoId;$("a_code").value=it.code;$("a_desc").value=it.desc;$("a_les").value=(it.lessons||[]).map(function(l){return l.t+" | "+l.v+" | "+(l.free?"bure":"funga")}).join("\n");
+    $("amsg").textContent="Unahariri: "+it.name+". Bonyeza Hifadhi."}};
+function up(inp,key){inp.onchange=async function(){var f=inp.files[0];if(!f)return;
+  try{var as=await claude.use("assets");if(!as){$("amsg").textContent="Kupakia picha hakupatikani.";return}
+    var r=await as.upload(f);SITE[key]=r.url;commit()}catch(e){$("amsg").textContent="Picha haikupakiwa."}}}
+up($("a_pp"),"profilePhoto");up($("a_hero"),"heroImage");
+})();
+</script></body></html>
